@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<title>Verdulería online</title>
+{% endblock %}
+
+{% block content %}
+	<h1>Hola {{titulo}}</h1>
+
+	{% load static %}
+
+	<div class="row">
+
+		{% include 'fruta-card.html' with nombre='Bananas' precio='Promoción 2kg $180' foto='bananas.jpg' %}
+
+		{% include 'fruta-card.html' with nombre='Manzanas rojas' precio='Promoción 2kg $230' foto='manzana-roja.jpg' %}
+
+		{% include 'fruta-card.html' with nombre='Manzanas verdes' precio='1kg $110' foto='manzana-verde.jpg' %}
+
+	</div>
+{% endblock %}
